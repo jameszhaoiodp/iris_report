@@ -1,0 +1,92 @@
+// @use 'src/app-palette' as *;
+/*
+ * COLOR PALETTE DEFINITIONS AND VARIABLES
+ */
+ @use '@angular/material' as mat;
+ //@import '@angular/material/theming';
+
+///////////////////////////////////////////////////////////
+////         v v YOU NEED TO CHANGE THIS ! v v         ////
+///////////////////////////////////////////////////////////
+//$mat-primary-palette: $mat-green;  // data capture <= IMPORTANT! CHANGE THIS FOR YOUR APP!
+//$mat-primary-palette: $mat-blue;   // template manager
+//$mat-primary-palette: $mat-teal;   // catalog manager
+//$mat-primary-palette: $mat-purple; // taxa file checker
+//$mat-primary-palette: $mat-gray;   // admin
+///////////////////////////////////////////////////////////
+////         ^ ^ YOU NEED TO CHANGE THIS ! ^ ^         ////
+///////////////////////////////////////////////////////////
+$mat-warn-palette: mat.$red-palette;
+
+$primary-color: mat.define-palette($mat-primary-palette, 500);
+$accent-color: mat.define-palette($mat-primary-palette, A400); // you MUST change this for Admin, the mat-grey palette has no accent colors!!!
+$warn-color: mat.define-palette($mat-warn-palette, 500);
+
+$light-theme: mat.define-light-theme($primary-color, $accent-color, $warn-color);
+$dark-theme:  mat.define-dark-theme($primary-color, $accent-color, $warn-color);
+
+// COLOR CONSTANTS
+$primary50:  mat.get-color-from-palette($mat-primary-palette, 50);	// you can also retrieve the color values using a map-get if you want to
+$primary100: mat.get-color-from-palette($mat-primary-palette, 100);
+$primary200: mat.get-color-from-palette($mat-primary-palette, 200);
+$primary300: mat.get-color-from-palette($mat-primary-palette, 300);
+$primary400: mat.get-color-from-palette($mat-primary-palette, 400);
+$primary500: mat.get-color-from-palette($mat-primary-palette, 500);
+$primary600: mat.get-color-from-palette($mat-primary-palette, 600);
+$primary700: mat.get-color-from-palette($mat-primary-palette, 700);
+$primary800: mat.get-color-from-palette($mat-primary-palette, 800);
+$primary900: mat.get-color-from-palette($mat-primary-palette, 900);
+$accent100:  mat.get-color-from-palette($mat-primary-palette, A100);
+$accent200:  mat.get-color-from-palette($mat-primary-palette, A200);
+$accent400:  mat.get-color-from-palette($mat-primary-palette, A400);
+$accent700:  mat.get-color-from-palette($mat-primary-palette, A700);
+$warn50:     mat.get-color-from-palette($mat-warn-palette, 50);
+$warn100:    mat.get-color-from-palette($mat-warn-palette, 100);
+$warn200:    mat.get-color-from-palette($mat-warn-palette, 200);
+$warn300:    mat.get-color-from-palette($mat-warn-palette, 300);
+$warn400:    mat.get-color-from-palette($mat-warn-palette, 400);
+$warn500:    mat.get-color-from-palette($mat-warn-palette, 500);
+$warn600:    mat.get-color-from-palette($mat-warn-palette, 600);
+$warn700:    mat.get-color-from-palette($mat-warn-palette, 700);
+$warn800:    mat.get-color-from-palette($mat-warn-palette, 800);
+$warn900:    mat.get-color-from-palette($mat-warn-palette, 900);
+
+// CONTRAST CONSTANTS (for fonts, etc.)
+$primary50contrast:  mat.get-contrast-color-from-palette($mat-primary-palette, 50);
+$primary100contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 100);
+$primary200contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 200);
+$primary300contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 300);
+$primary400contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 400);
+$primary500contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 500);
+$primary600contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 600);
+$primary700contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 700);
+$primary800contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 800);
+$primary900contrast: mat.get-contrast-color-from-palette($mat-primary-palette, 900);
+$accent100contrast:  mat.get-contrast-color-from-palette($mat-primary-palette, A100);
+$accent200contrast:  mat.get-contrast-color-from-palette($mat-primary-palette, A200);
+$accent400contrast:  mat.get-contrast-color-from-palette($mat-primary-palette, A400);
+$accent700contrast:  mat.get-contrast-color-from-palette($mat-primary-palette, A700);
+$warn50contrast:     mat.get-contrast-color-from-palette($mat-warn-palette, 50);
+$warn100contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 100);
+$warn200contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 200);
+$warn300contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 300);
+$warn400contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 400);
+$warn500contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 500);
+$warn600contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 600);
+$warn700contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 700);
+$warn800contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 800);
+$warn900contrast:    mat.get-contrast-color-from-palette($mat-warn-palette, 900);
+
+/*
+ * Material theme constants
+ */
+$page-grey-light: #fafafa; 		// this is material standard
+$page-grey-dark: #303030; 		// this is material standard
+$section-grey-light: #fafafa; 	// this is material standard
+$section-grey-dark: #303030; 	// this is material standard
+$card-grey-light: #ffffff;		// this is material standard
+$card-grey-dark: #424242;		// this is material standard
+$sidenav-grey: #413F3D;
+$light-grey: lightgrey;
+$grey: grey;
+$dark-grey: dimgrey;

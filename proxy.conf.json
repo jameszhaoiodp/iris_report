@@ -1,0 +1,10 @@
+{
+	"/api": {
+		"target": "https://web.iodp.tamu.edu",
+    "secure": false,
+    "pathRewrite": {
+			"^/api": ""
+		},
+    "changeOrigin": true
+	}
+}

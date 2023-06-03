@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2020",
+    "module": "es2020",
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@iodp/iodp-common": ["projects/lib-common/src/public-api"],
+      "@iodp/iodp-login": ["projects/lib-login/src/public-api"],
+      "@iodp/iodp-navbar": ["projects/lib-navbar/src/public-api"],
+	   "@cm/core/*": ["./projects/catalog-manager/src/app/core/*"],
+      "@cm/shared/*": ["./projects/catalog-manager/src/app/shared/*"],
+	  "@cm/*": ["./projects/catalog-manager/*"],
+	  "@da/core/*": ["./projects/data-access/src/app/core/*"],
+      "@da/shared/*": ["./projects/data-access/src/app/shared/*"],
+	  "@da/*": ["./projects/data-access/*"],
+      "@dc/core/*": ["./projects/data-capture/src/app/core/*"],
+      "@dc/shared/*": ["./projects/data-capture/src/app/shared/*"],
+      "@dc/*": ["./projects/data-capture/*"],
+      "@sadr/core/*": ["./projects/sadr/src/app/core/*"],
+      "@sadr/shared/*": ["./projects/sadr/src/app/shared/*"],
+      "@sadr/*": ["./projects/sadr/*"],
+      "@auther/core/*": ["./projects/auther/src/app/core/*"],
+      "@auther/shared/*": ["./projects/auther/src/app/shared/*"],
+      "@auther/*": ["./projects/auther/*"],
+      "@tm/*": ["./projects/template-manager/*"],
+      "@tm/core/*": ["./projects/template-manager/src/app/core/*"],
+      "@tm/shared/*": ["./projects/template-manager/src/app/shared/*"]
+    }
+  }
+}

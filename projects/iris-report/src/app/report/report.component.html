@@ -1,0 +1,45 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <div>
+    <label>
+      Start Date
+      <input formControlName="startDate" placeholder="dd/mm/yyyy"  >
+    </label>
+    <label>
+      Time:
+      <input formControlName="startTime" placeholder="hh:mm:ss" >
+    </label>
+
+  </div>
+  <!--  <div>-->
+  <!--    <label>-->
+  <!--      Format Eg:-->
+  <!--      <input  style="border: none" placeholder="29/4/2023" disabled>-->
+  <!--    </label>-->
+  <!--    <label>-->
+  <!--      Eg:-->
+  <!--      <input  style="border: none" placeholder="03:42:11" disabled>-->
+  <!--    </label>-->
+
+  <!--  </div>-->
+  <br>
+  <div>
+    <label>
+      End Date:
+      <input formControlName="endDate" placeholder="dd/mm/yyyy"   >
+    </label>
+    <label>
+      Time:
+      <input formControlName="endTime" placeholder="hh:mm:ss" >
+    </label>
+  </div>
+  <br>
+  <div>
+    <div>Format date: DD-MM-YYYY  e.g 29/4/2023</div>
+    <div>Format time: hh:mm:ss  e.g 03:42:11</div>
+  </div>
+  <div>
+    <br>
+    <button type="submit">Get IRis Report</button>
+  </div>
+
+</form>

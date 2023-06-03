@@ -1,0 +1,119 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "IRisReport": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:application": {
+                    "strict": true
+                }
+            },
+            "root": "projects/iris-report",
+            "sourceRoot": "projects/iris-report/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/iris-report",
+                        "index": "projects/iris-report/src/index.html",
+                        "main": "projects/iris-report/src/main.ts",
+                        "polyfills": "projects/iris-report/src/polyfills.ts",
+                        "tsConfig": "projects/iris-report/tsconfig.app.json",
+                        "assets": [
+                            {
+                                "glob": "**/*",
+                                "input": "./projects/lib-login/assets",
+                                "output": "/assets/"
+                            },
+                            "projects/iris-report/src/favicon.ico",
+                            "projects/iris-report/src/assets"
+                        ],
+                        "styles": [
+                            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+                            "projects/iris-report/src/styles.scss"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "1mb",
+                                    "maximumError": "6mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "4kb",
+                                    "maximumError": "4kb"
+                                }
+                            ],
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/iris-report/src/environments/environment.ts",
+                                    "with": "projects/iris-report/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "iris-report:build",
+                        "proxyConfig": "./projects/iris-report/proxy.conf.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "IRisReport:build:production"
+                        },
+                        "development": {
+                            "browserTarget": "IRisReport:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "IRisReport:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/iris-report/src/test.ts",
+                        "polyfills": "projects/iris-report/src/polyfills.ts",
+                        "tsConfig": "projects/iris-report/tsconfig.spec.json",
+                        "karmaConfig": "projects/iris-report/karma.conf.js",
+                        "assets": [
+                            "projects/iris-report/src/favicon.ico",
+                            "projects/iris-report/src/assets"
+                        ],
+                        "styles": [
+                            "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+                            "projects/iris-report/src/styles.scss"
+                        ],
+                        "scripts": []
+                    }
+                }
+            }
+        }
+    },
+    "cli": {
+        "analytics": false
+    }
+}
