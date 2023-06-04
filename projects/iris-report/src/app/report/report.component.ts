@@ -1,23 +1,25 @@
 import {Component, Input, OnInit, VERSION} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {  FormControl, FormGroup, NonNullableFormBuilder, Validators} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
-import {ServiceService} from "./service.service";
+// import {ServiceService} from "./service.service";
+import {environment} from "../../environments/environment";
 
+export interface DateRange {
+  startDate: FormControl<string>;
+  startTime: FormControl<string>;
+  endDate: FormControl<string>;
+  endTime: FormControl<string>;
+
+}
 @Component({
   selector: 'report',
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.css']
 })
 export class ReportComponent implements OnInit {
-  myForm: FormGroup = new FormGroup({
-    startDate: new FormControl(''),
-    startTime: new FormControl(''),
-    endDate: new FormControl(''),
-    endTime: new FormControl(''),
-  });
 
-
-  constructor(private fb: FormBuilder, private dataService: ServiceService) {
+  protected myForm!: FormGroup<DateRange>;
+  constructor(private fb: NonNullableFormBuilder ) {
 
   }
 
@@ -31,6 +33,8 @@ export class ReportComponent implements OnInit {
       endDate: ['', Validators.required],
       endTime: ['0:0:0'],
     });
+
+
 
     const today = new Date();
     const yyyy = today.getFullYear();
@@ -60,20 +64,35 @@ export class ReportComponent implements OnInit {
   }
 
   get_report(startDate: string, endDate: string){
-    this.dataService.getReport(startDate, endDate).subscribe((res : any)=>{
-      console.log(res);
-    });
+
+
+    let url = environment.serverUrl + '/limsR/IRISNavigationGet-ServiceTest?startdate=29/4/2023 23:50:00&enddate=30/4/2023 0:01:00';
+
+
+    var fileName = "IRis" + ".csv";
+    var link = document.createElement("a");
+
+    link.href = url;
+    link.target = "_blank";
+    link.download = fileName;
+    document.body.appendChild(link);
+    console.log(" ready to fire link ");
+    link.click();
+    document.body.removeChild(link);
+
   }
 
   onSubmit(form: FormGroup) {
     console.log('Valid?', form.valid); // true or false
-    console.log('startDate', form.value.startDate);
-    console.log('startTime', form.value.startTime);
-    console.log('endDate', form.value.endDate);
-    console.log('endTime', form.value.endTime);
+    console.log('startDate',  this.myForm.controls.startDate.value);
+    console.log('startTime', this.myForm.controls.startTime.value);
+
+
+    console.log(form.value);
 
     const startDate = "29/4/2023 23:50:00";
     const endDate = "30/4/2023 0:01:00";  //auto -5
     this.get_report(startDate, endDate);
+
   }
 }
