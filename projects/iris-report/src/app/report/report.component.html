@@ -1,4 +1,4 @@
-<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+<form [formGroup]="dateForm" (ngSubmit)="onSubmit(dateForm)">
   <div>
     <label>
       Start Date
@@ -39,7 +39,36 @@
   </div>
   <div>
     <br>
-    <button type="submit">Get IRis Report</button>
+    <button type="submit" [disabled]="!isFormValid">Get IRis Report</button>
   </div>
 
+  <div *ngIf="!startDate" style="color: red">
+    Start Date is not valid.
+  </div>
+
+<!--  <div *ngIf="!endDate" style="color: red">-->
+<!--    End Date is not valid.-->
+<!--  </div>-->
+
+  <div *ngIf="!startTime" style="color: red">
+    Start time is not valid.
+  </div>
+  <div *ngIf="!endTime" style="color: red">
+    End time is not valid.
+  </div>
+
+  <div *ngIf="isDiffHoursTooBig" style="color: red">
+    Time range cannot be bigger 4 hours.
+  </div>
+
+  <div *ngIf="!isEndDateBiggerStartDate" style="color: red">
+    End datetime should be bigger than start datetime.
+  </div>
+
+<!--  <div *ngIf="!startTime" style="color: red">-->
+<!--    Start Date is not valid.-->
+<!--  </div>-->
+<!--  <div *ngIf="!startTime" style="color: red">-->
+<!--    Start Date is not valid.-->
+<!--  </div>-->
 </form>

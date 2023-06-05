@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f36283cb-942e-4a3a-b93e-ba3127594f86" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/c6ac21bd397d1d6d375a4de39e4dd61352735ed4/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/c6ac21bd397d1d6d375a4de39e4dd61352735ed4/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/c6ac21bd397d1d6d375a4de39e4dd61352735ed4/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/c6ac21bd397d1d6d375a4de39e4dd61352735ed4/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/c6ac21bd397d1d6d375a4de39e4dd61352735ed4/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/c6ac21bd397d1d6d375a4de39e4dd61352735ed4/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/c6ac21bd397d1d6d375a4de39e4dd61352735ed4/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/14.2.10/angular-webpack/c6ac21bd397d1d6d375a4de39e4dd61352735ed4/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/iris-report/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/iris-report/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/iris-report/src/app/report/report.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projects/iris-report/src/app/report/report.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/iris-report/src/app/report/report.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/iris-report/src/app/report/report.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +78,10 @@
       <workItem from="1685763106029" duration="757000" />
       <workItem from="1685768175221" duration="7151000" />
       <workItem from="1685841716902" duration="147000" />
-      <workItem from="1685841874170" duration="449000" />
+      <workItem from="1685841874170" duration="1224000" />
+      <workItem from="1685915032159" duration="2629000" />
+      <workItem from="1685930166309" duration="8412000" />
+      <workItem from="1685943312603" duration="4000" />
     </task>
     <servers />
   </component>
